@@ -292,6 +292,8 @@ if __name__ == '__main__':
             # plt.xticks([])
             # plt.yticks([])
             # plt.savefig('t_{}.png'.format(frame), bbox_inches='tight', pad_inches=0.0)
+            videoWriter.write(np.hstack([cv2.normalize(depth.unsqueeze(-1).repeat(1,1,3).to(device).detach().cpu().numpy(), dst=None, 
+            alpha=0, beta=255, norm_type=cv2.NORM_MINMAX).astype(np.uint8), (color[:, :, [2,1,0]]*255).astype(np.uint8).clip(0,255)]))
             print('min_depth = {}'.format(depth.min()))
         elif direction == 1 and stop_next != 1:  # down
             frame += 1
