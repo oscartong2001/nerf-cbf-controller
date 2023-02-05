@@ -1,4 +1,5 @@
-# nerf-cbf-controller
+# <p align="center">Enforcing safety for vision-based controllers via Control Barrier Functions and Neural Radiance Fields</p>
+
 
 ## Installation 
 
@@ -41,4 +42,17 @@ and for double-integrator systems:
 
 ```
 python double_cbf.py configs/Replica/room1.yaml --output output/Replica/room1
+```
+
+The visualized results are automatically saved as `video.avi`.
+
+## Citation 
+
+```
+@article{tong2022enforcing,
+  title={Enforcing safety for vision-based controllers via Control Barrier Functions and Neural Radiance Fields},
+  author={Tong, Mukun and Dawson, Charles and Fan, Chuchu},
+  journal={arXiv preprint arXiv:2209.12266},
+  year={2022}
+}
 ```
